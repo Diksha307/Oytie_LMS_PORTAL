@@ -2,12 +2,14 @@ import firebase from "firebase/compat/app";
 import "firebase/compat/auth";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyBsVh3Vk0tFYfv1dZU-RsFrjAj15zixNkw",
-    authDomain: "user-authentication-f6834.firebaseapp.com",
-    projectId: "user-authentication-f6834",
-    storageBucket: "user-authentication-f6834.appspot.com",
-    messagingSenderId: "967986521695",
-    appId: "1:967986521695:web:34cc93b117fda93b1d5dea"
+  apiKey: "AIzaSyBjNcgC_bITzvFGJXMC6k01N67ZJLUo7CU",
+  authDomain: "lmsportal-9a073.firebaseapp.com",
+  databaseURL: "https://lmsportal-9a073-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "lmsportal-9a073",
+  storageBucket: "lmsportal-9a073.appspot.com",
+  messagingSenderId: "995068357724",
+  appId: "1:995068357724:web:11185625f57ec8faee0a99",
+  measurementId: "G-P2Q32VLYHB"
   };
 
 firebase.initializeApp(firebaseConfig);

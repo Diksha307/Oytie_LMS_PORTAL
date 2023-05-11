@@ -1,17 +1,24 @@
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
+import firebase from 'firebase/compat/app';
+import "firebase/compat/database";
+
+import { getAuth } from "firebase/auth";
+import {initializeApp} from "firebase/app";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBjNcgC_bITzvFGJXMC6k01N67ZJLUo7CU",
-  authDomain: "lmsportal-9a073.firebaseapp.com",
-  databaseURL: "https://lmsportal-9a073-default-rtdb.asia-southeast1.firebasedatabase.app",
-  projectId: "lmsportal-9a073",
-  storageBucket: "lmsportal-9a073.appspot.com",
-  messagingSenderId: "995068357724",
-  appId: "1:995068357724:web:74015688088f525bee0a99",
-  measurementId: "G-JXLH8GSPF3"
+  apiKey: "AIzaSyDrLFP47ZfhLdlsiVlDYiSU1CqSkG9W56A",
+  authDomain: "courses-55ce4.firebaseapp.com",
+  databaseURL: "https://courses-55ce4-default-rtdb.firebaseio.com",
+  projectId: "courses-55ce4",
+  storageBucket: "courses-55ce4.appspot.com",
+  messagingSenderId: "1019421520893",
+  appId: "1:1019421520893:web:c4c5fdd267712e28ae1f94"
 };
 
+const fireDb = firebase.initializeApp(firebaseConfig);
+export const app=initializeApp(firebaseConfig);
 
-export const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+export {fireDb};
+
+export const auth=getAuth(fireDb);
+
+export default fireDb.database().ref();
